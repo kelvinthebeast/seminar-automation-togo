@@ -22,6 +22,7 @@ public class HerokuPageTest {
 
     @Test
     void shouldLoginSuccessful() throws InterruptedException {
+        // locators 
         WebElement usrnameField = myDriver.findElement(By.cssSelector("#username"));
         WebElement pwdField = myDriver.findElement(By.cssSelector("#password"));
         WebElement loginBtn = myDriver.findElement(By.cssSelector("button[type='submit']"));
@@ -62,6 +63,6 @@ public class HerokuPageTest {
 
     @AfterAll
     public static void cleanUpDriver() {
-        myDriver.quit();
+        myDriver.quit(); // giai phong
     }
 }
